@@ -1,0 +1,86 @@
+$grid-gap-step: 5px;
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+@for $i from 0 to 11 {
+  .gap-#{$i} {
+    gap: calc(#{$i} * #{$grid-gap-step}) !important;
+  }
+}
+
+.flex {
+  @include flexify($wrap: wrap);
+
+  &-nowrap {
+    @include flexify($wrap: nowrap);
+  }
+
+  &-column {
+    @include flexify($column: true);
+  }
+
+  &-center {
+    @include flexify($align: center, $justify: center);
+  }
+}
+
+@each $align, $val in $flexAligns {
+  .align-items {
+    &-#{$align} {
+      @include flexify($align: $val);
+    }
+  }
+
+  .justify-content {
+    &-#{$align} {
+      @include flexify($justify: $val);
+    }
+  }
+}
+
+.card {
+  @include flexify($column: true);
+  gap: 2rem;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 1rem 1px #ddd;
+  border: {
+    radius: 1rem;
+    width: 2px;
+    color: #ddd;
+    style: solid;
+  }
+  min-width: 50rem;
+}
+
+
+.txt {
+  font-weight: $fw-r;
+  font-size: 1.6rem;
+
+  &-purple {
+    color: $purple;
+  }
+  &-primary {
+    color: $black;
+  }
+
+  &-secondary {
+    font-size: 1.4rem;
+    color: #5c6579;
+  }
+
+  &-sm {
+    font-size: 1.4rem !important;
+  }
+}
+
+.link {
+  font-size: 1.6rem;
+  color: $primary;
+}

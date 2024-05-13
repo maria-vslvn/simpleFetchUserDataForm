@@ -1,0 +1,15 @@
+@each $color, $val in $alertColors {
+  .alert-#{$color} {
+    padding: 1rem 2rem;
+    border: 2px solid tint($val, 70);
+    color: $val;
+    border-radius: 1rem;
+    font-size: 2rem;
+    background-color: tint($val, 85);
+    box-shadow: 0 0 1rem 0 tint($val, 60);
+  }
+}
+
+.alert-sm {
+  padding: .5rem 1rem;
+}

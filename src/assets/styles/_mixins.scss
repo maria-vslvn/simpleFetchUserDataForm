@@ -1,0 +1,37 @@
+@mixin flexify($column: unset, $dirsReverse: unset, $justify: unset, $align: unset, $wrap: unset) {
+  $localDir: '';
+  $localWrap: '';
+
+  display: flex;
+
+  @if $column == true {
+    $localDir: 'column';
+    flex-wrap: nowrap;
+  } @else if($column == false) {
+    $localDir: 'row';
+    flex-wrap: wrap;
+  }
+
+  @if $wrap != 'unset' {
+    flex-wrap: $wrap;
+  }
+
+  @if $dirsReverse == true {
+    flex-direction: #{$localDir}-reverse;
+  } @else {
+    flex-direction: #{$localDir};
+  }
+
+  @if $justify != 'unset' {
+    justify-content: $justify;
+  }
+
+  @if $align != 'unset' {
+    align-items: $align;
+  }
+}
+
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}

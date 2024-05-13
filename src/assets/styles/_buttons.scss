@@ -1,0 +1,37 @@
+[class*='btn-'] {
+  @include flexify($justify: center, $align: center);
+  cursor: pointer;
+  min-height: 4rem;
+
+  &[disabled] {
+    cursor: default;
+    background-color: $grey-light;
+    border-color: $grey-light;
+    color: $grey-dark;
+  }
+}
+
+.btn {
+  &-sm {
+    font-size: 1.4rem !important;
+    padding: .3rem .7rem !important;
+    font-weight: $fw-b;
+    min-height: 3rem;
+  }
+  &-primary {
+    padding: 1rem 2rem;
+    border: 3px solid $primary;
+    background-color: $primary;
+    color: $white;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  &-secondary {
+    padding: .5rem;
+    border: 2px solid $secondary;
+    background-color: $white;
+    border-radius: 1rem;
+    color: $secondary;
+  }
+}

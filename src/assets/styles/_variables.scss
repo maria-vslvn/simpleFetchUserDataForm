@@ -1,0 +1,44 @@
+// TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+$fs-base: 10;
+$fs-base-px: #{$fs-base}px;
+$ff-base: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$fw-r: 400;
+$fw-b: 700;
+
+
+// PALETTE
+$purple: #276b4c;
+$turquoise: #e19b3d;
+$white: #fff;
+$black: #0c052c;
+$grey-light: #ddd;
+$grey: #aaa;
+$grey-dark: #777;
+$red: #b9002b;
+
+$primary: $purple;
+$secondary: $turquoise;
+$error: $red;
+
+// HELPERS //
+$flexAligns: (
+  'start': flex-start,
+  'center': center,
+  'end': flex-end,
+  'stretch': stretch,
+  'between': space-between,
+  'around': space-around,
+);
+
+$aligns: (
+  'right': right,
+  'center': center,
+  'left': left,
+  'justify': justify,
+);
+
+$alertColors: (
+  'error': $error,
+  'default': $grey,
+);

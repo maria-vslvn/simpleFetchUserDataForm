@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'variables';
+@import 'mixins';
+@import 'helpers';
+@import 'alert';
+@import 'buttons';
+@import 'formFields';
+@import 'loader';
+
+html {
+  min-height: 100vh;
+  font: {
+    size: $fs-base-px;
+    family: $ff-base;
+    weight: $fw-r;
+  }
+
+  body {
+    min-height: 100vh;
+
+    @include flexify($column: true);
+
+    #root {
+      flex-grow: 1;
+      min-height: 100vh;
+
+      @include flexify($column: true, $align: center);
+    }
+  }
+}
+
+* {
+  font: {
+    family: $ff-base;
+    weight: $fw-r;
+  }
+  box-sizing: border-box;
+}

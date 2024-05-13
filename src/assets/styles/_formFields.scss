@@ -1,0 +1,21 @@
+.form-field {
+  @include flexify($column: true);
+  gap: .3rem;
+
+  &-label {
+    color: $grey-dark;
+    margin: 0;
+    text-transform: capitalize;
+    font: {
+      size: 1.6rem;
+    }
+  }
+
+  &-input {
+    border-radius: 1rem;
+    min-height: 4rem;
+    border: 2px solid $grey-light;
+    padding: .5rem 1rem;
+    font-size: 1.6rem;
+  }
+}
